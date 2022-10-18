@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play with Events</title>
+</head>
+
+<body>
+  <h1>This is a simple heading</h1>
+  <button>Click Me</button>
+  <button>Click Me -1</button>
+  <button id="special">Click Me -2</button>
+  <button id="last">Click Me -3</button>
+
+  <script>
+    function buttonEvent() {
+      console.log('This is a button event');
+      console.log(new Date());
+      document.body.style.backgroundColor = 'tomato';
+      //   document.body.style.backgroundColor = 'cyan';
+      //   document.body.innerHTML = '<h1>I like the way javascript play with the DOM. It is absolutely amazing.</h1>';
+    }
+
+    function headingEvent() {
+      console.log('This is a heading event');
+    }
+
+
+    let secondPerson = document.getElementById('special');
+    // secondPerson.addEventListener('click', buttonEvent);
+    // secondPerson.onclick = buttonEvent;
+
+    let lastPerson = document.getElementById('last');
+    lastPerson.addEventListener('click', function() {
+      document.body.style.backgroundColor = 'black'
+    });
+  </script>
+</body>
+
+</html>

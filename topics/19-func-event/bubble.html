@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubble</title>
+</head>
+
+<body>
+  <div id="container">
+    <h1>My List</h1>
+    <ul id="myList">
+      <li id="first" class="item">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+      <li class="item">Delectus exercitationem numquam, nostrum ipsum placeat dolores!</li>
+      <li class="item">Deleniti repudiandae inventore facilis, fuga quibusdam quos?</li>
+      <li class="item">Enim incidunt inventore, est modi eligendi aspernatur.</li>
+      <li class="item">Numquam dolorem soluta ducimus fugiat eveniet quo?</li>
+    </ul>
+    <button id="addNew">Add Item</button>
+  </div>
+
+  <script>
+    let count = 1;
+    //TODO: Implementing the method to add a new item at the end of the list
+    let btn = document.getElementById('addNew');
+    btn.addEventListener('click', function(event) {
+      let parentItem = document.getElementById('myList');
+      let item = document.createElement('li');
+      item.innerText = 'This is a new item. It is ' + count + ' numbered item added to the list by manually';
+      count++;
+      parentItem.appendChild(item);
+    })
+    //TODO: This method is for removing the item what is clicked.It is implemented in parent for solving some kind of problem
+    let itemsParent = document.getElementById('myList');
+    itemsParent.addEventListener('click', function(event) {
+      //   console.log(this, event.target);
+      // the parent element is\
+      let parent = event.target.parentNode;
+      parent.removeChild(event.target);
+    })
+
+    // var items = document.getElementsByClassName('item');
+    // // console.log(items);
+
+    // for (let i = 0; i < items.length; i++) {
+    //   const item = items[i];
+    //   //   console.log(item);
+    //   item.addEventListener('click', function(event) {
+    //     // console.log(event.target.parentNode);
+    //     // finding the parent node
+    //     let parent = event.target.parentNode;
+    //     parent.removeChild(item);
+    //   })
+    // }
+    console.log('This is a fun. I can make a number of anything list by only clicking the button of html document.');
+    // document.getElementById('container').addEventListener('click', function() {
+    //   console.log('container is clicked');
+    // })
+    // let firstElement = document.getElementById('first');
+    // firstElement.addEventListener('click', function() {
+    //   firstElement.style.backgroundColor = 'tomato';
+    //   console.log('First item clicked');
+    //   event.stopImmediatePropagation();
+    //   firstElement.style.fontSize = '40px';
+    //   //   event.stopPropagation();
+    // })
+
+    // firstElement.addEventListener('click', function() {
+    //   firstElement.style.padding = '20px';
+    //   firstElement.style.color = 'red';
+    //   firstElement.style.backgroundColor = 'black';
+    //   //   event.stopPropagation();
+
+    // })
+
+    // document.getElementById('myList').addEventListener('click', function() {
+    //   console.log('myList list is clicked');
+    //   //   event.stopPropagation();
+    // })
+  </script>
+</body>
+
+</html>

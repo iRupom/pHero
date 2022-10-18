@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exploring DOM</title>
+  <style>
+    article {
+      border: 2px solid tomato;
+      border-radius: 20px;
+      margin: 5px;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section>
+      <h1>Exploring DOM</h1>
+      <article>
+        <h1>article - 1</h1>
+        <p class="author">author - 1</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, facere quo. Maiores deleniti fugiat eaque reprehenderit voluptatum natus beatae. Doloremque possimus beatae qui vero voluptatem saepe adipisci nemo enim corrupti!</p>
+      </article>
+      <article class="special">
+        <h1>article - 2</h1>
+        <p class="author">author - 2</p>
+        <p class="description">Earum, amet atque dicta tempora neque veritatis minus consequuntur sit dolorum voluptates mollitia at quaerat adipisci aspernatur enim molestias rem omnis dolore autem. Ratione esse odio ipsam voluptatem minima quae.</p>
+      </article>
+      <article class="special">
+        <h1>article - 3</h1>
+        <p class="author">author - 3</p>
+        <p class="description">Placeat reiciendis eaque architecto necessitatibus quia eum iusto, laborum fugit nisi eos, praesentium corporis tenetur minus inventore distinctio doloremque, ex nostrum. Quae adipisci deleniti suscipit natus rerum laudantium facere ipsum.</p>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    var authors = document.querySelectorAll('.special h1')
+    console.log(authors);
+    // authors.style.color = 'red'
+    // authors.style.backgroundColor = 'Yellow'
+    // authors.style.fontSize = '30px'
+    for (var i = 0; i < authors.length; i++) {
+      var element = authors[i];
+      console.log(element);
+      element.style.color = 'green'
+      element.style.fontSize = '20px'
+      element.style.backgroundColor = 'yellow'
+      element.innerText = 'Lekhok Vai ' + i;
+    }
+    // var articles = document.getElementsByTagName('article');
+    // for (var i = 0; i < articles.length; i++) {
+    //   var element = articles[i];
+    //   console.log(element.innerHTML);
+    //   console.log(element.innerText);
+    // }
+
+    console.log(document.head["title"]);
+  </script>
+</body>
+
+</html>

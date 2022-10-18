@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>inserIntoDOM</title>
+  <style>
+    article {
+      border: 2px solid tomato;
+      border-radius: 20px;
+      margin: 5px;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section>
+      <h1>Exploring DOM</h1>
+      <article id="first-article">
+        <h1>article - 1</h1>
+        <p class="author">author - 1</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, facere quo. Maiores deleniti fugiat eaque reprehenderit voluptatum natus beatae. Doloremque possimus beatae qui vero voluptatem saepe adipisci nemo enim corrupti!</p>
+      </article>
+      <article class="special">
+        <h1>article - 2</h1>
+        <p class="author">author - 2</p>
+        <p class="description">Earum, amet atque dicta tempora neque veritatis minus consequuntur sit dolorum voluptates mollitia at quaerat adipisci aspernatur enim molestias rem omnis dolore autem. Ratione esse odio ipsam voluptatem minima quae.</p>
+      </article>
+      <article class="special">
+        <h1>article - 3</h1>
+        <p class="author">author - 3</p>
+        <p class="description">Placeat reiciendis eaque architecto necessitatibus quia eum iusto, laborum fugit nisi eos, praesentium corporis tenetur minus inventore distinctio doloremque, ex nostrum. Quae adipisci deleniti suscipit natus rerum laudantium facere ipsum.</p>
+      </article>
+      <article>
+        <ul>
+          <li>Gift-item-1</li>
+          <li>Gift-item-2</li>
+          <li>Gift-item-3</li>
+          <li>Gift-item-4</li>
+          <li>Gift-item-5</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <script>
+    let article = document.getElementById('first-article')
+    const newPara = document.createElement('p')
+    newPara.innerText = 'This is a new Paragraph. This is added by Rakib Talukder Rupom'
+    article.appendChild(newPara)
+
+    let ulist = document.getElementsByTagName('ul')[0]
+    const newitem = document.createElement('li');
+    newitem.innerHTML = 'This is a new Gift itme'
+    ulist.appendChild(newitem);
+  </script>
+</body>
+
+</html>
